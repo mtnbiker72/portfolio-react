@@ -1,4 +1,5 @@
 import React from 'react';
+import portfolio from '../../static/portfolio.json'
 
 export default function Portfolio() {
   return (

@@ -25,45 +25,44 @@ export default function Contact() {
     alert(result.status);
   };
   return (
-    <Form onSubmit={handleSubmit}>
+    <div>
+      <p>
+        More more information, please reach out!
+      </p>
+      <Form onSubmit={handleSubmit}>
 
-<Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-    <Form.Label column sm={1}>
-      Email
-    </Form.Label>
-    <Col sm={4}>
-      <Form.Control type="email" placeholder="Email" />
-    </Col>
-  </Form.Group>
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+          <Form.Label column sm={1}>
+            Email
+          </Form.Label>
+          <Col sm={4}>
+            <Form.Control type="email" placeholder="Email" />
+          </Col>
+        </Form.Group>
 
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-    <Form.Label column sm={1}>
-      Password
-    </Form.Label>
-    <Col sm={4}>
-      <Form.Control type="password" placeholder="Password" />
-    </Col>
-  </Form.Group>
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+          <Form.Label column sm={1}>
+            Password
+          </Form.Label>
+          <Col sm={4}>
+            <Form.Control type="password" placeholder="Password" />
+          </Col>
+        </Form.Group>
 
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-    <Form.Label column sm={1}>
-      Password
-    </Form.Label>
-    <Col sm={4}>
-      <Form.Control as="textarea" rows={3} />
-    </Col>
-  </Form.Group>
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+          <Form.Label column sm={1}>
+            Password
+          </Form.Label>
+          <Col sm={4}>
+            <Form.Control as="textarea" rows={3} />
+          </Col>
+        </Form.Group>
 
-
-      {/* <Form.Group className="mb-3" controlId="formComments">
-        <Form.Label>Comments</Form.Label>
-        <Form.Control as="textarea" rows={3} />
-      </Form.Group> */}
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </div>
   )
 };
 
