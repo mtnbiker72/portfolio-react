@@ -1,18 +1,55 @@
 import React, { useState, useReducer } from "react";
-// import { Form, Button, Row, Col } from "react-bootstrap";
 
 // Updates state based on form activity
+// Blur happens when focus moves out of form field
 function reducer(state, action) {
   switch (action.type) {
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 };
+    case 'nameChange':
+      const newNameChange = {...state, name: action.payload}
+      return { ...newNameChange, submitDisabled: !isFormDataValid(newNameChange)}
+    case 'emailChange':
+      const newEmailChange = { ...state, email: action.payload };
+      return { ...newEmailChange, submitDisabled: !isFormDataValid(newEmailChange)}
+    case 'messageChange':
+      const newMessageChange = { ...state, message: action.payload };
+      return { ...newMessageChange, submitDisabled: !isFormDataValid(newMessageChange)} 
+    case 'nameBlur': 
+      const newState = {...state, isNameVisited: true, isNameValid: state.name}
+      return {...newState, validationMessage: getValidationMessage(newState) }
+    case 'emailBlur': 
+      const newEmailState = {...state, isEmailVisited: true, isEmailValid: isEmailValid(state.email)}
+      return {...newEmailState, validationMessage: getValidationMessage(newEmailState) }
+    case 'messageBlur': 
+      const newMessageState = {...state, isMessageVisited: true, isMessageValid: state.message}
+      return {...newMessageState, validationMessage: getValidationMessage(newMessageState) }
     default:
       throw new Error();
   }
 }
 
+function isEmailValid(email) {
+  return !!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+}
+
+function isFormDataValid(state) {
+  return (state.name && isEmailValid(state.email) && state.message)
+}
+
+function getValidationMessage(state) {
+  let validationMessage = [] ;
+  if (state.isNameVisited && !state.name) {
+    validationMessage.push ("Please enter a valid name");  
+  }
+  if (state.isEmailVisited && !isEmailValid(state.email)) {
+    validationMessage.push ("Please enter a valid email");  
+  }
+  if (state.isMessageVisited && !state.message) {
+    validationMessage.push ("Please enter a valid message");  
+  }
+  return validationMessage
+}
+// Keep track of whether each form field has been visited and if entry is valid
+// Once the field has been visited, the user should have enter a valid entry
 export default function Contact() {
   const initialArg = {
     name: "",
@@ -22,9 +59,10 @@ export default function Contact() {
     isNameVisited: false,
     isEmailVisited: false,
     isMessageVisited: false,
-    isNameValid: false,
-    isEmailValid: false,
-    isMessageValid: false,
+    isNameValid: true,
+    isEmailValid: true,
+    isMessageValid: true,
+    validationMessage: []
   }
 
   const [state, dispatch] = useReducer(reducer, initialArg);
@@ -56,77 +94,39 @@ export default function Contact() {
       </p>
 
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-        </div>
 
         <div className="form-group">
           <label for="inputName">Name</label>
-          <input type="text" className="form-control" id="inputName" placeholder="Enter Name"></input>
+          <input type="text" className="form-control" 
+            style={{ border: state.isNameValid ? '' : '1px solid red' }}
+            value={state.name} id="inputName" onChange={(e) => dispatch({ type: 'nameChange', payload: e.target.value })} 
+            onBlur={() => dispatch({ type: 'nameBlur'})}
+            placeholder="Enter Name"></input>
+        </div>
+
+        <div className="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" className="form-control" 
+            style={{ border: state.isEmailValid ? '' : '1px solid red' }} 
+            value={state.email} id="inputEmail" onChange={(e) => dispatch({ type: 'emailChange', payload: e.target.value })} 
+            onBlur={() => dispatch({ type: 'emailBlur'})}
+            placeholder="Enter email"></input>
         </div>
 
         <div className="form-group">
           <label for="inputMessage">Message</label>
-          <input type="text" className="form-control" id="inputMessage" placeholder="Message"></input>
+          <input type="text" className="form-control" style={{ border: state.isMessageValid ? '' : '1px solid red' }} 
+            value={state.message} id="inputMessage" onChange={(e) => dispatch({ type: 'messageChange', payload: e.target.value })}  
+            onBlur={() => dispatch({ type: 'messageBlur'})}
+            input-lg placeholder="Message"></input>
+        </div>
+        <div>
+          {state.validationMessage.map((msg) => (<p>{msg}</p>))}
         </div>
 
-        <button type="submit" className="btn btn-primary" enabled={!state.submitDisabled}>Submit</button> 
+        <button type="submit" className="btn btn-primary" disabled={state.submitDisabled}>Submit</button>
+
       </form>
     </div>
   )
 };
-
-{/* <Form onSubmit={handleSubmit}>
-
-        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-          <Form.Label column sm={1}>
-            Email
-          </Form.Label>
-          <Col sm={4}>
-            <Form.Control type="email" placeholder="Email" onBlur={() => alert('Please input a valid email address')} />
-          </Col>
-        </Form.Group>
-
-        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-          <Form.Label column sm={1}>
-            Name
-          </Form.Label>
-          <Col sm={4}>
-            <Form.Control type="text" placeholder="Your Name" />
-          </Col>
-        </Form.Group>
-
-        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-          <Form.Label column sm={1}>
-            Message
-          </Form.Label>
-          <Col sm={4}>
-            <Form.Control as="textarea" rows={3} />
-          </Col>
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form> */}
-
-
-
-// return (
-//   <form onSubmit={handleSubmit}>
-//     <div>
-//       <label htmlFor="name">Name:</label>
-//       <input type="text" id="name" required />
-//     </div>
-//     <div>
-//       <label htmlFor="email">Email:</label>
-//       <input type="email" id="email" required />
-//     </div>
-//     <div>
-//       <label htmlFor="message">Message:</label>
-//       <textarea id="message" required />
-//     </div>
-//     <button type="submit">{status}</button>
-//   </form>
-// );
