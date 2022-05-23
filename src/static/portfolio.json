@@ -1,20 +1,20 @@
 [
     {
-        "name": "Finance",
-        "pic": "url",
-        "github": "https://github.com/mtnbiker72",
+        "name": "Top Stocks!",
+        "pic": "../src/static/TopStocks.png",
+        "github": "https://github.com/mtnbiker72/Project1-Finance",
         "deployed": "heroku"
     },
     {
-        "name": "Map",
-        "pic": "url",
-        "github": "https://github.com/mtnbiker72",
+        "name": "Earthquake Map",
+        "pic": "../src/static/Earthquakes",
+        "github": "https://github.com/mtnbiker72/earthquake-experience",
         "deployed": "heroku"
     },
     {
-        "name": "Blah",
-        "pic": "url",
-        "github": "https://github.com/mtnbiker72",
+        "name": "Weather Forecast",
+        "pic": "../src/static/Weather.png",
+        "github": "https://github.com/mtnbiker72/weather-dashboard",
         "deployed": "heroku"
     },
     {

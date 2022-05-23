@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../../../src/static/grass.jpeg'
+import image1 from '../../static/grass.jpeg';
 
 const styles = {
   aboutStyle: {

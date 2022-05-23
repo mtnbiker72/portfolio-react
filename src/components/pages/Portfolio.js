@@ -7,7 +7,7 @@ export default function Portfolio() {
     <div>
       <h1>Portfolio Page</h1>
       <p>
-        Below are some of the projects I've completed
+        Below are some of the projects I've completed:
       </p>
       { portfolio.map((project) => {
         return (<Project project={project}/>)

@@ -27,14 +27,17 @@ function reducer(state, action) {
   }
 }
 
+// Verify the email field is in th correct format
 function isEmailValid(email) {
   return !!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 }
 
+// Before submitting the form, make sure all fields are complete and valid
 function isFormDataValid(state) {
   return (state.name && isEmailValid(state.email) && state.message)
 }
 
+// If the user has filled out the form fields incorrectly, show these errors
 function getValidationMessage(state) {
   let validationMessage = [] ;
   if (state.isNameVisited && !state.name) {
@@ -87,6 +90,10 @@ export default function Contact() {
     let result = await response.json();
     alert(result.status);
   };
+
+  // Returning the html. If the user has filled out a field incorrectly, it will add
+  // a red border to that field.  Once the user has clicked on a field and moves on, a 
+  // validation check is performed.
   return (
     <div>
       <p>
