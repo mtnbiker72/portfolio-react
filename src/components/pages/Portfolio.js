@@ -1,5 +1,6 @@
 import React from 'react';
 import portfolio from '../../static/portfolio.json'
+import Project from './Project'
 
 export default function Portfolio() {
   return (
@@ -8,6 +9,10 @@ export default function Portfolio() {
       <p>
         Below are some of the projects I've completed
       </p>
+      { portfolio.map((project) => {
+        return (<Project project={project}/>)
+      })
+    }
     </div>
   );
 }
