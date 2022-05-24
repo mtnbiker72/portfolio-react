@@ -2,54 +2,70 @@ import React from 'react';
 import myResume from '../../../src/HeatherGraham.pdf'
 
 const styles = {
-  aboutStyle: {
-    background: 'light-blue',
-    justifyContent: 'flex-end',
-    text: 'white',
-    margin: '0px'
+  resumeLink: {
+    textAlign: 'center',
+    margin: '15px'
   },
-  defineImg: {
-    padding: 0,
-    width: "100%",
-    maxHeight: "400px"
+  resume: {
+    margin: '15px',
   }
 };
 
 export default function Blog() {
   return (
     <div>
-      <div class="row">
-        <div class="col-sm-6">
-
-          <div class="card text-center border-success mb-3">
-            <div class="card-header">Front End Skill</div>
-            <div class="card-body text-success">
-              <p class="card-text">HTML</p>
-              <p class="card-text">CSS</p>
-              <p class="card-text">JavaScript</p>
-              <p class="card-text">JQuery</p>
-              <p class="card-text">Mobile First Design</p>
-              <p class="card-text">React</p>
+      <div style={styles.resume}>
+        <div className="row">
+          <div className="col-sm-4">
+            <div className="card border-success">
+              <div className="card-body text-success">
+                <h5 className="card-title">Front End Skills</h5>
+                <p className="card-text">* HTML</p>
+                <p className="card-text">* CSS</p>
+                <p className="card-text">* JavaScript</p>
+                <p className="card-text">* HTML</p>
+                <p className="card-text">* JQuery</p>
+                <p className="card-text">* Mobile First Design</p>
+                <p className="card-text">* React</p>
+              </div>
             </div>
           </div>
-
-          <div class="col-sm-6"></div>
-          <div class="card text-center border-success mb-3">
-            <div class="card-header">Back End Skills</div>
-            <div class="card-body text-success">
-              <p class="card-text">APIs</p>
-              <p class="card-text">NodeJS</p>
-              <p class="card-text">Express</p>
-              <p class="card-text">MySQL/Sequalize</p>
-              <p class="card-text">MongoDB, Mongoose</p>
-              <p class="card-text">REST</p>
-              <p class="card-text">GraphQL</p>
+          <div className="col-sm-4">
+            <div className="card border-success">
+              <div className="card-body text-success">
+                <h5 className="card-title">Back End Skills</h5>
+                <p className="card-text">* APIs</p>
+                <p className="card-text">* Node</p>
+                <p className="card-text">* Express</p>
+                <p className="card-text">* MySQL/Sequelize</p>
+                <p className="card-text">* MongoDB/Mongoose</p>
+                <p className="card-text">* REST</p>
+                <p className="card-text">* GraphQL</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-4">
+            <div className="card border-success">
+              <div className="card-body text-success">
+                <h5 className="card-title">Dev/Ops Skills</h5>
+                <p className="card-text">* Git</p>
+                <p className="card-text">* Heroku Deployment</p>
+                <p className="card-text">* Linux</p>
+                <p className="card-text">* BASH Programming</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <a class="btn btn-success" href={myResume} role="button">Link to My Resume</a>
+        <div className="col d-flex justify-content-center">
+          <a className="btn btn-success text-center" style={styles.resumeLink} href={myResume} role="button">Link to My Resume</a>
 
+        </div>
+
+      </div>
     </div>
   );
 }
+
+
+
+

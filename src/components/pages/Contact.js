@@ -1,5 +1,11 @@
 import React, { useState, useReducer } from "react";
 
+const styles = {
+  contact: {
+    margin: '20px'
+  }
+};
+
 // Updates state based on form activity
 // Blur happens when focus moves out of form field
 function reducer(state, action) {
@@ -27,7 +33,7 @@ function reducer(state, action) {
   }
 }
 
-// Verify the email field is in th correct format
+// Verify the email field is in the correct format
 function isEmailValid(email) {
   return !!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 }
@@ -93,16 +99,16 @@ export default function Contact() {
 
   // Returning the html. If the user has filled out a field incorrectly, it will add
   // a red border to that field.  Once the user has clicked on a field and moves on, a 
-  // validation check is performed.
+  // validation check is performed
   return (
-    <div>
+    <div style={styles.contact}>
       <p>
         More more information, please reach out!
       </p>
 
       <form onSubmit={handleSubmit}>
 
-        <div className="form-group">
+        <div className="form-group w-25">
           <label for="inputName">Name</label>
           <input type="text" className="form-control" 
             style={{ border: state.isNameValid ? '' : '1px solid red' }}
@@ -111,7 +117,7 @@ export default function Contact() {
             placeholder="Enter Name"></input>
         </div>
 
-        <div className="form-group">
+        <div className="form-group w-25">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" className="form-control" 
             style={{ border: state.isEmailValid ? '' : '1px solid red' }} 
@@ -120,16 +126,17 @@ export default function Contact() {
             placeholder="Enter email"></input>
         </div>
 
-        <div className="form-group">
+        <div className="form-group w-25">
           <label for="inputMessage">Message</label>
-          <input type="text" className="form-control" style={{ border: state.isMessageValid ? '' : '1px solid red' }} 
+          <input type="textarea" className="form-control" style={{ border: state.isMessageValid ? '' : '1px solid red' }} 
             value={state.message} id="inputMessage" onChange={(e) => dispatch({ type: 'messageChange', payload: e.target.value })}  
             onBlur={() => dispatch({ type: 'messageBlur'})}
-            input-lg placeholder="Message"></input>
+            rows="5" placeholder="Message"></input>
         </div>
         <div>
           {state.validationMessage.map((msg) => (<p>{msg}</p>))}
         </div>
+        <br></br>
 
         <button type="submit" className="btn btn-primary" disabled={state.submitDisabled}>Submit</button>
 

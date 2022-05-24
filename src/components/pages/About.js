@@ -1,18 +1,27 @@
 import React from 'react';
-import image1 from '../../static/grass.jpeg';
+import image1 from '../../static/ocean.jpg';
+import self from '../../static/self.JPG';
 
 const styles = {
   aboutStyle: {
     background: 'light-blue',
+    fontFamily: 'Noto Sans', 
     justifyContent: 'flex-end',
     text: 'white',
-    margin: '0px'
+    margin: '0px',
   },
   defineImg: {
     padding: 0,
     width: "100%",
+    maxHeight: "300px"
+  },
+  defineSelf: {
+    padding: 0,
     maxHeight: "400px"
-  }
+  },
+  // background: {
+  //   background: 'rgb(217, 217, 232)',
+  // }
 };
 
 export default function About() {
@@ -22,13 +31,13 @@ export default function About() {
         <img className="defineImg" style={styles.defineImg} src={image1} alt="grass"></img>
       </div>
 
-      <div className="card text-center">
+      <div className="card text-center" style={styles.background}>
         <div className="card-header">
           Heather Graham
         </div>
 
-        <div class="row">
-          <div class="col-sm-6">
+        <div className="row">
+          <div className="col-sm-6">
             <div className="card-body">
               <p className="card-text">
                 Welcome to my homepage! My name is Heather Graham and thanks to the bootcamp program through DU I
@@ -36,12 +45,12 @@ export default function About() {
                 to Engineering, I've worked on some of the latest and greatest technologies.
                 <br></br>
                 <br></br>
-                Currently I work as a Network Engineer for Comcast in the innovation wing. We develop applications for
-                business customers and do small trials to judge interest levels. If it's a success, it's moved to other
-                groups to maintain and add additional functionality. I've spend most of my career in the VoIP space. My
-                most recent project was to integrate the open-sourced FreeSWITCH application into an Audio
-                Conferencing solution for Comcast Business. It was a challenging project but very exciting to be
-                part of.
+                Currently I work as a Principle Network Engineer for Comcast in the innovation division. We develop 
+                applications for business customers and do small trials to judge interest level. If it's a success, 
+                it's moved to other groups to maintain and add additional functionality. I've spend most of my 
+                career in the VoIP space. My most recent project was to integrate the open-sourced FreeSWITCH 
+                application into an Audio Conferencing solution for Comcast Business. It was a challenging project 
+                but very exciting to be part of.
                 <br></br>
                 <br></br>
                 In addition to work, I enjoy a lot of activies. I love to spend time biking, hiking, skiing,
@@ -52,10 +61,10 @@ export default function About() {
             </div>
           </div>
 
-          <div class="col-sm-6">
+          <div className="col-sm-6">
             <div className="card-body">
               <p className="card-text">
-                I'm another card
+              <img className="defineImg" style={styles.defineSelf} src={self} alt="grass"></img>
               </p>
             </div>
           </div>
