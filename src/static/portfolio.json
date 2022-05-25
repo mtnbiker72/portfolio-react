@@ -1,26 +1,27 @@
 [
     {
-        "name": "Top Stocks!",
-        "pic": "../src/static/TopStocks.png",
-        "github": "https://github.com/mtnbiker72/Project1-Finance",
-        "deployed": "heroku"
+        "name": "Earthquake Map",
+        "pic": "/Earthquakes.png",
+        "github": "https://github.com/mtnbiker72/earthquake-experience",
+        "deployed": "https://blooming-caverns-49714.herokuapp.com/"
     },
     {
-        "name": "Earthquake Map",
-        "pic": "../src/static/Earthquakes",
-        "github": "https://github.com/mtnbiker72/earthquake-experience",
-        "deployed": "heroku"
+        "name": "Top Stocks!",
+        "pic": "/TopStocks.png",
+        "github": "https://github.com/mtnbiker72/Project1-Finance",
+        "deployed": "https://mtnbiker72.github.io/Project1-Finance/"
     },
+
     {
         "name": "Weather Forecast",
-        "pic": "../src/static/Weather.png",
+        "pic": "/Weather.png",
         "github": "https://github.com/mtnbiker72/weather-dashboard",
-        "deployed": "heroku"
+        "deployed": "https://mtnbiker72.github.io/weather-dashboard/"
     },
     {
-        "name": "Blah2",
-        "pic": "url",
+        "name": "Work Scheduler",
+        "pic": "/WorkScheduler.png",
         "github": "https://github.com/mtnbiker72",
-        "deployed": "heroku"
+        "deployed": "https://mtnbiker72.github.io/homework5-work-scheduler"
     }
 ]

@@ -2,7 +2,7 @@ import React, { useState, useReducer } from "react";
 
 const styles = {
   contact: {
-    margin: '20px'
+    margin: '40px'
   }
 };
 

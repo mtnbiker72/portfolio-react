@@ -4,10 +4,14 @@ import Navigation from './Navigation';
 const styles = {
     nameSection: {
       display: 'flex',
+      position: 'relative',
       alignItems: 'center',
+      top: '25px',
       justifyContent: 'center',
       color: 'white',
       textAlign: 'center',
+      fontFamily: 'Noto Sans',
+      fontSize: '45px',
       height: '100px',
     },
     headerSection: {

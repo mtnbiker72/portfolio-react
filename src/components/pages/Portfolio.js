@@ -2,10 +2,18 @@ import React from 'react';
 import portfolio from '../../static/portfolio.json'
 import Project from './Project'
 
+const styles = {
+  portfolioStyle: {
+    fontFamily: 'Noto Sans', 
+    fontSize: '25px',
+    margin: '20px',
+  },
+}
+
 export default function Portfolio() {
   return (
     <div>
-      <h1>Portfolio Page</h1>
+      <div style={styles.portfolioStyle}> 
       <p>
         Below are some of the projects I've completed:
       </p>
@@ -13,6 +21,7 @@ export default function Portfolio() {
         return (<Project project={project}/>)
       })
     }
+    </div>
     </div>
   );
 }

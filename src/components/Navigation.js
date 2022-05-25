@@ -4,7 +4,9 @@ const styles = {
   navStyle: {
     background: 'light-blue',
     justifyContent: 'flex-end',
-    text: 'white'
+    text: 'white',
+    fontFamily: 'Noto Sans',
+    fontSize: '25px'
   },
 };
 

@@ -19,9 +19,10 @@ const styles = {
     padding: 0,
     maxHeight: "400px"
   },
-  // background: {
-  //   background: 'rgb(217, 217, 232)',
-  // }
+  bodyStyle: {
+    margin: '25px',
+    fontSize: '20px'
+  }
 };
 
 export default function About() {
@@ -36,9 +37,9 @@ export default function About() {
           Heather Graham
         </div>
 
-        <div className="row">
+        <div className="row" style={styles.bodyStyle}>
           <div className="col-sm-6">
-            <div className="card-body">
+            <div className="card-body" >
               <p className="card-text">
                 Welcome to my homepage! My name is Heather Graham and thanks to the bootcamp program through DU I
                 have made this webpage! I've been in the IT and telecom space for over 25 years. From Support to QA

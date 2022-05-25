@@ -17,8 +17,8 @@ export default function Blog() {
       <div style={styles.resume}>
         <div className="row">
           <div className="col-sm-4">
-            <div className="card border-success">
-              <div className="card-body text-success">
+            <div className="card border-dark">
+              <div className="card-body text-dark">
                 <h5 className="card-title">Front End Skills</h5>
                 <p className="card-text">* HTML</p>
                 <p className="card-text">* CSS</p>
@@ -31,8 +31,8 @@ export default function Blog() {
             </div>
           </div>
           <div className="col-sm-4">
-            <div className="card border-success">
-              <div className="card-body text-success">
+            <div className="card border-dark">
+              <div className="card-body text-dark">
                 <h5 className="card-title">Back End Skills</h5>
                 <p className="card-text">* APIs</p>
                 <p className="card-text">* Node</p>
@@ -45,8 +45,8 @@ export default function Blog() {
             </div>
           </div>
           <div className="col-sm-4">
-            <div className="card border-success">
-              <div className="card-body text-success">
+            <div className="card border-dark">
+              <div className="card-body text-dark">
                 <h5 className="card-title">Dev/Ops Skills</h5>
                 <p className="card-text">* Git</p>
                 <p className="card-text">* Heroku Deployment</p>
