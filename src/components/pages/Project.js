@@ -15,11 +15,12 @@ const styles = {
     },
 };
 
-export default function Portfolio(props) {
+// Show different projects with links to github and deployment site
+export default function Project(props) {
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }} >
+        <div>
             <div class="card" style={styles.cardStyle}>
-                <img class="card-img-top" style={styles.picStyle} src={process.env.PUBLIC_URL + props.project.pic} alt="Card image cap"></img>
+                <img class="card-img-top" style={styles.picStyle} src={process.env.PUBLIC_URL + props.project.pic} alt="Project Pic"></img>
                 <div class="card-body">
                     <h5 class="card-title">{props.project.name}</h5>
                     <a href={props.project.github} target="_blank">Github <FaGithub/></a>

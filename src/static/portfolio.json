@@ -11,7 +11,6 @@
         "github": "https://github.com/mtnbiker72/Project1-Finance",
         "deployed": "https://mtnbiker72.github.io/Project1-Finance/"
     },
-
     {
         "name": "Weather Forecast",
         "pic": "/Weather.png",
@@ -23,5 +22,17 @@
         "pic": "/WorkScheduler.png",
         "github": "https://github.com/mtnbiker72",
         "deployed": "https://mtnbiker72.github.io/homework5-work-scheduler"
+    },
+    {
+        "name": "Employee Tracker",
+        "pic": "/Employee-Tracker.png",
+        "github": "https://github.com/mtnbiker72/employee-tracker",
+        "deployed": "https://drive.google.com/file/d/1zTe38OzkzT1CfKPCxFbd9JrbBsjTulOq/view"
+    },
+    {
+        "name": "Note Taker",
+        "pic": "/note-taker.png",
+        "github": "https://github.com/mtnbiker72/note-taker",
+        "deployed": "https://guarded-tor-62571.herokuapp.com/"
     }
 ]

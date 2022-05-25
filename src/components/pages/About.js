@@ -41,9 +41,10 @@ export default function About() {
           <div className="col-sm-6">
             <div className="card-body" >
               <p className="card-text">
-                Welcome to my homepage! My name is Heather Graham and thanks to the bootcamp program through DU I
-                have made this webpage! I've been in the IT and telecom space for over 25 years. From Support to QA
-                to Engineering, I've worked on some of the latest and greatest technologies.
+                My name is Heather Graham and welcome to my website!  I've been in the IT and telecom space for 
+                over 25 years. From Support to QA to Engineering, I've worked on some of the latest and greatest 
+                technologies.  Recently, I've completed University of Denver's Coding Boot Camp.  This was an
+                amazing experience where I learned coding skills 
                 <br></br>
                 <br></br>
                 Currently I work as a Principle Network Engineer for Comcast in the innovation division. We develop 
