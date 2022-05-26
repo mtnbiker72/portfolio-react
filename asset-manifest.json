@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mtnbiker72/portfolio-react/static/css/main.e7720ab7.css",
-    "main.js": "/mtnbiker72/portfolio-react/static/js/main.299b6cb0.js",
+    "main.js": "/mtnbiker72/portfolio-react/static/js/main.099c79b1.js",
     "static/media/ocean.jpg": "/mtnbiker72/portfolio-react/static/media/ocean.357d334eda69417e1858.jpg",
     "static/media/self.JPG": "/mtnbiker72/portfolio-react/static/media/self.9e7b314f97676f87b92e.JPG",
     "static/media/HeatherGraham.pdf": "/mtnbiker72/portfolio-react/static/media/HeatherGraham.dac35aba4fe65baa5428.pdf",
     "index.html": "/mtnbiker72/portfolio-react/index.html",
     "main.e7720ab7.css.map": "/mtnbiker72/portfolio-react/static/css/main.e7720ab7.css.map",
-    "main.299b6cb0.js.map": "/mtnbiker72/portfolio-react/static/js/main.299b6cb0.js.map"
+    "main.099c79b1.js.map": "/mtnbiker72/portfolio-react/static/js/main.099c79b1.js.map"
   },
   "entrypoints": [
     "static/css/main.e7720ab7.css",
-    "static/js/main.299b6cb0.js"
+    "static/js/main.099c79b1.js"
   ]
 }
