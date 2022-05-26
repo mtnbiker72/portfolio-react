@@ -43,8 +43,9 @@ export default function About() {
               <p className="card-text">
                 My name is Heather Graham and welcome to my website!  I've been in the IT and telecom space for 
                 over 25 years. From Support to QA to Engineering, I've worked on some of the latest and greatest 
-                technologies.  Recently, I've completed University of Denver's Coding Boot Camp.  This was an
-                amazing experience where I learned coding skills 
+                technologies.  Recently I've completed University of Denver's Coding Boot Camp.  This was an
+                amazing experience where I learned coding skills from basic HTML and CSS, to the latest 
+                technologies like REACT and MongoDB.
                 <br></br>
                 <br></br>
                 Currently I work as a Principle Network Engineer for Comcast in the innovation division. We develop 
